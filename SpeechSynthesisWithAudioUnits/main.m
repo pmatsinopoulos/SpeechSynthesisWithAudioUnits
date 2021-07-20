@@ -9,6 +9,7 @@
 #import <AudioToolbox/AUGraph.h>
 #import <AudioToolbox/AudioComponent.h>
 #import <AudioToolbox/AUComponent.h>
+#import <AudioToolbox/CAShow.h>
 #import <ApplicationServices/ApplicationServices.h>
 
 #import "CheckError.h"

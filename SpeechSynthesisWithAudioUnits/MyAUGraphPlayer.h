@@ -13,7 +13,6 @@
 
 typedef struct _MyAUGraphPlayer {
   AUGraph graph;
-  AudioUnit speechAU;
 } MyAUGraphPlayer;
 
 #endif /* MyAUGraphPlayer_h */
