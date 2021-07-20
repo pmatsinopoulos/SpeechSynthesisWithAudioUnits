@@ -115,7 +115,7 @@ void PrepareSpeechSynthesisAudioUnit(MyAUGraphPlayer *player) {
                                   &dataSize),
              "Getting the chanel");
   
-  SpeakCFString(channel, CFSTR("Good Morning my friend! How are you today?"), NULL);
+  SpeakCFString(channel, player->textToSpeak, NULL);
 }
 
 void PrepareMatrixReverbAudioUnit(MyAUGraphPlayer *player) {
@@ -150,10 +150,16 @@ void PrepareAudioUnitGraph(MyAUGraphPlayer *player) {
 }
 
 int main(int argc, const char * argv[]) {
+  if (argc < 2) {
+    NSLog(@"1st argument: You need to give the phrase to be spoken out.\n");
+    return 1;
+  }
+  
   @autoreleasepool {
     NSPrint(@"Starting...\n");
     
     MyAUGraphPlayer player = {0};
+    player.textToSpeak = CFStringCreateWithCString(kCFAllocatorDefault, argv[1], CFStringGetSystemEncoding());
     
     PrepareAudioUnitGraph(&player);
     
@@ -169,6 +175,8 @@ int main(int argc, const char * argv[]) {
     usleep((int)(sleepDuration * 1000 * 1000));
     
     StopAudioUnitGraphPlayingBack(player.graph);
+    
+    CFRelease(player.textToSpeak);
     
     NSPrint(@"Bye!\n");
   }

@@ -13,6 +13,7 @@
 
 typedef struct _MyAUGraphPlayer {
   AUGraph graph;
+  CFStringRef textToSpeak;
 } MyAUGraphPlayer;
 
 #endif /* MyAUGraphPlayer_h */
