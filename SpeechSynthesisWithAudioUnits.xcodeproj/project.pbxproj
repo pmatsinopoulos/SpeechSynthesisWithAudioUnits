@@ -8,7 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E5DB822826A4865400DFBFD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DB822726A4865400DFBFD8 /* main.m */; };
+		E5DB823226A4877D00DFBFD8 /* NSPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DB823126A4877D00DFBFD8 /* NSPrint.m */; };
+		E5DB823826A48B7500DFBFD8 /* StopAudioUnitGraphPlayingBack.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DB823726A48B7500DFBFD8 /* StopAudioUnitGraphPlayingBack.m */; };
+		E5DB823D26A48BB400DFBFD8 /* CheckError.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DB823C26A48BB400DFBFD8 /* CheckError.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5DB825826A494C200DFBFD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5DB825426A494C100DFBFD8 /* SpeechSynthesisExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E5DB824A26A494C100DFBFD8;
+			remoteInfo = SpeechSynthesisExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E5DB822226A4865400DFBFD8 /* CopyFiles */ = {
@@ -25,6 +38,14 @@
 /* Begin PBXFileReference section */
 		E5DB822426A4865400DFBFD8 /* SpeechSynthesisWithAudioUnits */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SpeechSynthesisWithAudioUnits; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DB822726A4865400DFBFD8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5DB822F26A486D100DFBFD8 /* MyAUGraphPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAUGraphPlayer.h; sourceTree = "<group>"; };
+		E5DB823126A4877D00DFBFD8 /* NSPrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPrint.m; sourceTree = "<group>"; };
+		E5DB823426A4878500DFBFD8 /* NSPrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSPrint.h; sourceTree = "<group>"; };
+		E5DB823726A48B7500DFBFD8 /* StopAudioUnitGraphPlayingBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAudioUnitGraphPlayingBack.m; sourceTree = "<group>"; };
+		E5DB823A26A48B7D00DFBFD8 /* StopAudioUnitGraphPlayingBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopAudioUnitGraphPlayingBack.h; sourceTree = "<group>"; };
+		E5DB823C26A48BB400DFBFD8 /* CheckError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckError.m; sourceTree = "<group>"; };
+		E5DB823F26A48BBE00DFBFD8 /* CheckError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckError.h; sourceTree = "<group>"; };
+		E5DB825426A494C100DFBFD8 /* SpeechSynthesisExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SpeechSynthesisExample.xcodeproj; path = ../SpeechSynthesisExample/SpeechSynthesisExample.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +62,7 @@
 		E5DB821B26A4865400DFBFD8 = {
 			isa = PBXGroup;
 			children = (
+				E5DB825426A494C100DFBFD8 /* SpeechSynthesisExample.xcodeproj */,
 				E5DB822626A4865400DFBFD8 /* SpeechSynthesisWithAudioUnits */,
 				E5DB822526A4865400DFBFD8 /* Products */,
 			);
@@ -57,9 +79,40 @@
 		E5DB822626A4865400DFBFD8 /* SpeechSynthesisWithAudioUnits */ = {
 			isa = PBXGroup;
 			children = (
+				E5DB823626A48B5300DFBFD8 /* AudioUtils */,
+				E5DB823026A4871400DFBFD8 /* Utils */,
 				E5DB822726A4865400DFBFD8 /* main.m */,
+				E5DB822F26A486D100DFBFD8 /* MyAUGraphPlayer.h */,
 			);
 			path = SpeechSynthesisWithAudioUnits;
+			sourceTree = "<group>";
+		};
+		E5DB823026A4871400DFBFD8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E5DB823F26A48BBE00DFBFD8 /* CheckError.h */,
+				E5DB823C26A48BB400DFBFD8 /* CheckError.m */,
+				E5DB823426A4878500DFBFD8 /* NSPrint.h */,
+				E5DB823126A4877D00DFBFD8 /* NSPrint.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E5DB823626A48B5300DFBFD8 /* AudioUtils */ = {
+			isa = PBXGroup;
+			children = (
+				E5DB823A26A48B7D00DFBFD8 /* StopAudioUnitGraphPlayingBack.h */,
+				E5DB823726A48B7500DFBFD8 /* StopAudioUnitGraphPlayingBack.m */,
+			);
+			path = AudioUtils;
+			sourceTree = "<group>";
+		};
+		E5DB825526A494C100DFBFD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5DB825926A494C200DFBFD8 /* SpeechSynthesisExample */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +159,12 @@
 			mainGroup = E5DB821B26A4865400DFBFD8;
 			productRefGroup = E5DB822526A4865400DFBFD8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E5DB825526A494C100DFBFD8 /* Products */;
+					ProjectRef = E5DB825426A494C100DFBFD8 /* SpeechSynthesisExample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E5DB822326A4865400DFBFD8 /* SpeechSynthesisWithAudioUnits */,
@@ -113,12 +172,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		E5DB825926A494C200DFBFD8 /* SpeechSynthesisExample */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = SpeechSynthesisExample;
+			remoteRef = E5DB825826A494C200DFBFD8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E5DB822026A4865400DFBFD8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5DB823226A4877D00DFBFD8 /* NSPrint.m in Sources */,
 				E5DB822826A4865400DFBFD8 /* main.m in Sources */,
+				E5DB823826A48B7500DFBFD8 /* StopAudioUnitGraphPlayingBack.m in Sources */,
+				E5DB823D26A48BB400DFBFD8 /* CheckError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
